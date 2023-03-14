@@ -2,6 +2,11 @@ window.onload = function() {
 	"use strict";
 	var messagesEl = document.querySelector("#messages")
 	var userName = sessionStorage.getItem('name')
+	if (userName == null) {
+				window.location.href = '/welcome'
+			} else {
+				userName = sessionStorage.getItem('name')
+			}
 	var messageEl = null
 	let input = document.querySelector("#chatText")
 	var message
@@ -32,7 +37,7 @@ window.onload = function() {
 			})
 			
 		} catch (error) {
-			console.log('There was an error.', error)
+			console.log('An error occured.', error)
 			
 		}
 	}
@@ -58,13 +63,13 @@ window.onload = function() {
 	}
 	async function updateMessages() {
 		const messages = await getAllMessages()
-//		Clearing after server resp. for faster loading.
+
 		messagesEl.innerHTML = ''
 		for (let message of messages) {
 			appendMessage(message.userName, message.messageContent)
 		}
 	}
-//	Run as Main
+
 	setInterval(updateMessages, 500);
 	input.addEventListener('keypress', handleEnter)
 }
