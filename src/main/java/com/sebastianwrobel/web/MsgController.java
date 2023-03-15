@@ -18,8 +18,8 @@ import com.sebastianwrobel.repository.UserRepository;
 
 
 @RestController
-@RequestMapping("api")
-public class ApiController {
+@RequestMapping(value = "api")
+public class MsgController {
 
 	@Autowired
 	UserRepository userRepo;

@@ -3,9 +3,6 @@ package com.sebastianwrobel.service;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
-import java.util.stream.Collectors;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -28,10 +25,4 @@ public class ChannelService {
 		return channels;
 	}
 
-	public List<Long> getChannelById() {
-		List<Long> channelIds = new ArrayList<Long>(channelRepo.getChannels().keySet());
-		return null;
-	}
-
-	
 }

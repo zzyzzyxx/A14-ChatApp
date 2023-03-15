@@ -23,10 +23,6 @@ public class Channel {
 	 this.users = users;
  }
 
- @Override
-public String toString() {
-	return "Channel [name=" + name + ", channelId=" + channelId + ", chats=" + chats + ", users=" + users + "]";
-}
 
 public Map<Long, Message> getChats() {
 	return chats;

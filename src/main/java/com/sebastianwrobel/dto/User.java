@@ -3,7 +3,6 @@ package com.sebastianwrobel.dto;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import java.util.Set;
 
 public class User {
 
@@ -13,6 +12,7 @@ public class User {
 
 	public Map<Long, Channel> channels = new HashMap<>();
 	
+	//empty constructor
 	public User () {};
 	
 	public User (String userName, Long userId, Map<Long, Channel> channels) {

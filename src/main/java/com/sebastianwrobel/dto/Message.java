@@ -6,7 +6,7 @@ public class Message {
 	private String messageStatement;
 	private String userName;
 	
-	
+	//empty constructor
 	public Message () {};
 
 	public Message (Long chatId, String chatStatement) {

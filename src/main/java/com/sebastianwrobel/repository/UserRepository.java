@@ -38,13 +38,13 @@ public class UserRepository {
 		allChatMap.put(chat1.getMessageId(), chat1);
 
 
-		Channel chan1 = new Channel("Default", 1L, placeHolderChat, userData);
+		Channel defaultChannel = new Channel("Default", 1L, placeHolderChat, userData);
 
 		Map<Long, Channel> chat1ChannelMap = new HashMap<>();
-		chat1ChannelMap.put(1L, chan1);
-		allChannelMap.put(1L, chan1);
+		chat1ChannelMap.put(1L, defaultChannel);
+		allChannelMap.put(1L, defaultChannel);
 
-		chan1.setChats(chatMap);
+		defaultChannel.setChats(chatMap);
 	}
 
 	public User save(User user) {
