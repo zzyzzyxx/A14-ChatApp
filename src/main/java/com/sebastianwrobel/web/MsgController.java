@@ -18,7 +18,7 @@ import com.sebastianwrobel.repository.UserRepository;
 
 
 @RestController
-@RequestMapping(value = "api")
+@RequestMapping("api")
 public class MsgController {
 
 	@Autowired
