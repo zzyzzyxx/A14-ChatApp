@@ -19,13 +19,11 @@ public class ChannelRepository {
 		Map<Long, Channel> channels = new HashMap<>();
 		channels = userRepo.getChannels();
 		return channels;
-		
 	}
+	
 	public Map<Long, Channel> populateChannels(Long channelId, Channel channel) {
-		
 		 channelMap.put(channelId, channel);
-		 return channelMap;
-		
+		 return channelMap;	
 	}
 
 }

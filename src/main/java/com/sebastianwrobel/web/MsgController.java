@@ -27,9 +27,7 @@ public class MsgController {
 	
 	@GetMapping("/list-messages")
 	public List<MessageDto> listMessages (ListMessagesRequest request) {
-		
 		return userRepo.listMessages(request.getChannelId());
-		
 	}
 	
 	@PostMapping("/send-message")

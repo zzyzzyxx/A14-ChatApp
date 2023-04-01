@@ -7,9 +7,7 @@ import java.util.Objects;
 public class User {
 
 	public String userName;
-	
 	public Long userId;
-
 	public Map<Long, Channel> channels = new HashMap<>();
 	
 	//empty constructor

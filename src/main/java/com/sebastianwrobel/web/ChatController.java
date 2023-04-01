@@ -22,16 +22,13 @@ public class ChatController {
 
 	@GetMapping("/welcome")
 	public String getWelcome(ModelMap model) {
-
 		List<Channel> channels = channelService.getChannelNames();
 		model.put("channels", channels);
-		
 		return "welcome";
 	}
 
 	@GetMapping("/channel/{channelId}")
 	public String getChannel( ModelMap model, @PathVariable Long channelId) {
-
 		return "/channel";
 	}
 }

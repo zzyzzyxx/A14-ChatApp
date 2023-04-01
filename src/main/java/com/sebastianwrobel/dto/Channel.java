@@ -7,13 +7,9 @@ import java.util.Map;
 public class Channel {
 	
  private String name;
- 
  private Long channelId;
- 
  private Map<Long, Message> chats = new HashMap<>();
- 
  private Map<Long, User> users = new HashMap<>();
- 
  public Channel() {}
  
  public Channel(String name, Long channelId, Map<Long, Message> chats, Map<Long, User> users) {

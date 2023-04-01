@@ -36,14 +36,12 @@ public class UserRepository {
 		placeHolderChat.put(1L, chat1);
 
 		allChatMap.put(chat1.getMessageId(), chat1);
-
-
+		
 		Channel defaultChannel = new Channel("Default", 1L, placeHolderChat, userData);
 
 		Map<Long, Channel> chat1ChannelMap = new HashMap<>();
 		chat1ChannelMap.put(1L, defaultChannel);
 		allChannelMap.put(1L, defaultChannel);
-
 		defaultChannel.setChats(chatMap);
 	}
 
@@ -62,34 +60,28 @@ public class UserRepository {
 	public Map<Long, Channel> getChannels() {
 		populateUsers(null);
 		return allChannelMap;
-
 	}
 
 	public List<MessageDto> listMessages(Long channelId) {
 		return messages.stream().filter((m) -> m.getChannelId().equals(channelId))
-				.collect(Collectors.toList());
-	
+					   .collect(Collectors.toList());
 	}
 
 	public User addUser(User user) {
 		populateUsers(user);
-
 		return user;
 	}
 
 	public void setUserId(User newUser) {
 		newUser.setUserId(userId++);
-
 	}
 
 	public void getExistingUser(User user) {
-		populateUsers(user);
-		
+		populateUsers(user);	
 	}
 
 	public void addMessage(MessageDto message) {
-		messages.add(message);
-		
+		messages.add(message);	
 	}
 
 }
