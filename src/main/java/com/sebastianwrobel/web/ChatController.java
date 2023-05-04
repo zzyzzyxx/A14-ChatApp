@@ -18,7 +18,10 @@ public class ChatController {
 	@Autowired
 	public ChannelService channelService;
 
-	
+	@GetMapping("/")
+	public String getTheWelcomePage() {
+		return "redirect:/welcome";
+	}
 
 	@GetMapping("/welcome")
 	public String getWelcome(ModelMap model) {
