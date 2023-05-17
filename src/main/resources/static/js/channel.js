@@ -2,11 +2,11 @@ window.onload = function() {
 	"use strict";
 	var messagesEl = document.querySelector("#messages")
 	var userName = sessionStorage.getItem('name')
-	if (userName == null) {
-				window.location.href = '/welcome'
-			} else {
-				userName = sessionStorage.getItem('name')
-			}
+	if (userName == null && window.location.pathname !== '/welcome') {
+		window.location.href = '/welcome'
+	} else {
+		userName = sessionStorage.getItem('name')
+	}
 	var messageEl = null
 	let input = document.querySelector("#chatText")
 	var message
@@ -73,4 +73,6 @@ window.onload = function() {
 	setInterval(updateMessages, 500);
 	input.addEventListener('keypress', handleEnter)
 }
+
+
 

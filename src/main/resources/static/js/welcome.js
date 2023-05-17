@@ -1,12 +1,12 @@
 window.onload = function() {
-	"use strict"
- 
-if (typeof window === "undefined") {
-	console.log("Undefined window")
-} else {
-	const selectedName = prompt("Type your nick:")
-	sessionStorage.setItem('name', selectedName)
+	"use strict";
 
-}
+	const selectedName = sessionStorage.getItem('name');
 
-}
+	if (selectedName == null) {
+		const name = prompt("Type your nick:");
+		sessionStorage.setItem('name', name);
+	} else {
+		// Name is already stored
+	}
+};
